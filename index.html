@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <title>Tinotenda &amp; Chiedza — Wedding Table Allocation</title>
+
+  <meta name="theme-color" content="#08080A">
+  <meta name="color-scheme" content="dark">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Table Allocation">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-royal-black">
+  <div class="texture-overlay"></div>
+  <div class="ambient-glow"></div>
+
+  <!-- Ornate Golden Corner Flourishes (Matching the invitation card) -->
+  <svg class="corner-flourish corner-top-left" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M10 10 Q 50 10 75 35 Q 100 60 100 100 Q 100 140 140 140" stroke="url(#goldGrad)" stroke-width="2" fill="none"/>
+    <path d="M15 5 C 35 15, 60 10, 85 25 C 105 38, 120 70, 115 105" stroke="url(#goldGrad)" stroke-width="1.5" fill="none"/>
+    <path d="M5 25 C 10 50, 25 80, 50 105 C 75 130, 110 145, 145 150" stroke="url(#goldGrad)" stroke-width="1.2" fill="none"/>
+    <circle cx="8" cy="8" r="4" fill="url(#goldGrad)"/>
+    <circle cx="20" cy="8" r="3" fill="url(#goldGrad)"/>
+    <circle cx="32" cy="9" r="2.5" fill="url(#goldGrad)"/>
+    <circle cx="44" cy="11" r="2" fill="url(#goldGrad)"/>
+    <circle cx="8" cy="20" r="3" fill="url(#goldGrad)"/>
+    <circle cx="9" cy="32" r="2.5" fill="url(#goldGrad)"/>
+    <circle cx="11" cy="44" r="2" fill="url(#goldGrad)"/>
+    <path d="M45 28 C 48 18, 62 18, 65 26 C 68 34, 52 38, 45 28 Z" fill="url(#goldGrad)" opacity="0.85"/>
+    <path d="M28 45 C 18 48, 18 62, 26 65 C 34 68, 38 52, 28 45 Z" fill="url(#goldGrad)" opacity="0.85"/>
+    <path d="M80 42 C 85 30, 102 34, 100 45 C 98 56, 82 52, 80 42 Z" fill="url(#goldGrad)" opacity="0.85"/>
+    <path d="M42 80 C 30 85, 34 102, 45 100 C 56 98, 52 82, 42 80 Z" fill="url(#goldGrad)" opacity="0.85"/>
+    <path d="M110 65 C 120 55, 138 65, 130 78 C 122 88, 108 78, 110 65 Z" fill="url(#goldGrad)" opacity="0.85"/>
+    <defs>
+      <linearGradient id="goldGrad" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+        <stop offset="0%" stop-color="#EED58E"/>
+        <stop offset="40%" stop-color="#D4AF37"/>
+        <stop offset="70%" stop-color="#9C782F"/>
+        <stop offset="100%" stop-color="#DFBA5E"/>
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <svg class="corner-flourish corner-bottom-right" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g transform="rotate(180 100 100)">
+      <path d="M10 10 Q 50 10 75 35 Q 100 60 100 100 Q 100 140 140 140" stroke="url(#goldGrad)" stroke-width="2" fill="none"/>
+      <path d="M15 5 C 35 15, 60 10, 85 25 C 105 38, 120 70, 115 105" stroke="url(#goldGrad)" stroke-width="1.5" fill="none"/>
+      <path d="M5 25 C 10 50, 25 80, 50 105 C 75 130, 110 145, 145 150" stroke="url(#goldGrad)" stroke-width="1.2" fill="none"/>
+      <circle cx="8" cy="8" r="4" fill="url(#goldGrad)"/>
+      <circle cx="20" cy="8" r="3" fill="url(#goldGrad)"/>
+      <circle cx="32" cy="9" r="2.5" fill="url(#goldGrad)"/>
+      <circle cx="44" cy="11" r="2" fill="url(#goldGrad)"/>
+      <circle cx="8" cy="20" r="3" fill="url(#goldGrad)"/>
+      <circle cx="9" cy="32" r="2.5" fill="url(#goldGrad)"/>
+      <circle cx="11" cy="44" r="2" fill="url(#goldGrad)"/>
+      <path d="M45 28 C 48 18, 62 18, 65 26 C 68 34, 52 38, 45 28 Z" fill="url(#goldGrad)" opacity="0.85"/>
+      <path d="M28 45 C 18 48, 18 62, 26 65 C 34 68, 38 52, 28 45 Z" fill="url(#goldGrad)" opacity="0.85"/>
+      <path d="M80 42 C 85 30, 102 34, 100 45 C 98 56, 82 52, 80 42 Z" fill="url(#goldGrad)" opacity="0.85"/>
+      <path d="M42 80 C 30 85, 34 102, 45 100 C 56 98, 52 82, 42 80 Z" fill="url(#goldGrad)" opacity="0.85"/>
+      <path d="M110 65 C 120 55, 138 65, 130 78 C 122 88, 108 78, 110 65 Z" fill="url(#goldGrad)" opacity="0.85"/>
+    </g>
+  </svg>
+
+  <!-- Main Fullscreen Seating Chart Wrapper -->
+  <main class="seating-board-wrapper" id="boardWrapper">
+    <div class="board-top">
+      <header class="wedding-header">
+        <div class="monogram-crest">
+          <svg class="monogram-svg" viewBox="0 0 100 70" fill="none">
+            <text x="36" y="52" class="monogram-letter letter-t">T</text>
+            <text x="54" y="52" class="monogram-letter letter-c">C</text>
+          </svg>
+        </div>
+
+        <p class="wedding-prefix">The Wedding of</p>
+
+        <div class="names-container">
+          <span class="person-name groom-name">Tinotenda Callisto Jokonya</span>
+          <span class="ampersand">&amp;</span>
+          <span class="person-name bride-name">Chiedza Kayla Juwao</span>
+        </div>
+
+        <div class="header-divider">
+          <span class="divider-line"></span>
+          <span class="subtitle-text">Table Allocations</span>
+          <span class="divider-line"></span>
+        </div>
+
+        <p class="venue-date">23 October 2026 &bull; Hideaway Lodge, Darwendale</p>
+      </header>
+
+      <!-- Group Navigation: Tables 1–5 · 6–10 · 11–15 · 16–20 -->
+      <nav class="group-nav" id="groupNav" aria-label="Table groups">
+        <div class="group-tabs" id="groupTabs"></div>
+        <div class="group-progress-track"><div class="group-progress" id="groupProgress"></div></div>
+      </nav>
+    </div>
+
+    <!-- Current group of 5 tables -->
+    <section class="tables-grid grouped" id="tablesGrid"></section>
+
+    <!-- Footer Note with biblical quote from invitation -->
+    <footer class="wedding-footer">
+      <p class="scripture-quote">“So they are no longer two, but one flesh. Therefore what God has joined together, let no one separate.” — Matthew 19:6</p>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

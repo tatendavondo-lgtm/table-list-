@@ -1,0 +1,560 @@
+/* =========================================================
+   TINOTENDA & CHIEDZA WEDDING SEATING CHART
+   Invitation Match: Black, Gold, Burgundy & Sage Green
+   ========================================================= */
+
+:root {
+  --font-serif: 'Cardo', Georgia, serif;
+  --font-display: 'Cinzel', serif;
+  --font-script: 'Pinyon Script', cursive;
+  --font-sans: 'Montserrat', sans-serif;
+
+  --bg-color: #080809;
+  --bg-gradient: radial-gradient(circle at 50% 20%, #16171B 0%, #08080A 80%);
+  --text-primary: #EDE8DF;
+  --text-secondary: #B5A895;
+  --card-bg: rgba(18, 18, 22, 0.88);
+  --card-border: rgba(212, 175, 55, 0.35);
+  --card-border-inner: rgba(212, 175, 55, 0.14);
+  --card-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+  --accent-gold: #DFBA5E;
+  --gold-light: #F4E2AA;
+  --gold-gradient: linear-gradient(135deg, #F5E5B8 0%, #D4AF37 50%, #A27B2B 100%);
+  --divider-color: rgba(212, 175, 55, 0.4);
+  --ambient-glow: rgba(212, 175, 55, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100dvh;
+  max-height: 100dvh;
+  overflow: hidden;
+  overscroll-behavior: none;
+  background-color: var(--bg-color);
+  background-image: var(--bg-gradient);
+  color: var(--text-primary);
+  font-family: var(--font-serif);
+  -webkit-font-smoothing: antialiased;
+}
+
+.texture-overlay {
+  position: fixed;
+  inset: 0;
+  opacity: 0.04;
+  background-image: radial-gradient(#FFFFFF 1px, transparent 1px);
+  background-size: 4px 4px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.ambient-glow {
+  position: fixed;
+  top: -10vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80vw;
+  height: 55vh;
+  border-radius: 50%;
+  background: var(--ambient-glow);
+  filter: blur(120px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Ornate Golden Corner Flourishes */
+.corner-flourish {
+  position: fixed;
+  width: clamp(85px, 10vw, 160px);
+  height: clamp(85px, 10vw, 160px);
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.85;
+}
+
+.corner-top-left {
+  top: 8px;
+  left: 8px;
+}
+
+.corner-bottom-right {
+  bottom: 8px;
+  right: 8px;
+}
+
+/* =========================================================
+   MAIN FULLSCREEN WRAPPER
+   ========================================================= */
+
+.seating-board-wrapper {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  height: 100dvh;
+  max-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem 2.6rem 0.9rem 2.6rem;
+  max-width: 1920px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.board-top {
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.wedding-header {
+  text-align: center;
+  margin-bottom: 0.35rem;
+}
+
+.monogram-crest {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -4px;
+}
+
+.monogram-svg {
+  width: 60px;
+  height: 44px;
+}
+
+.monogram-letter {
+  font-family: 'Cinzel', serif;
+  font-size: 38px;
+  fill: url(#goldGrad);
+  font-weight: 600;
+  letter-spacing: -3px;
+}
+
+.letter-t {
+  transform: translateX(-6px);
+}
+
+.letter-c {
+  font-family: 'Pinyon Script', cursive;
+  font-size: 46px;
+  transform: translate(6px, 2px);
+  opacity: 0.95;
+}
+
+.wedding-prefix {
+  font-family: var(--font-display);
+  font-size: clamp(0.74rem, 0.95vw, 0.9rem);
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 0.1rem;
+}
+
+.names-container {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+  line-height: 1.1;
+  margin-bottom: 0.15rem;
+}
+
+.person-name {
+  font-family: var(--font-script);
+  font-size: clamp(1.9rem, 3vw, 2.95rem);
+  color: var(--accent-gold);
+  text-shadow: 0 0 12px rgba(212, 175, 55, 0.35);
+  white-space: nowrap;
+}
+
+.ampersand {
+  font-family: var(--font-serif);
+  font-size: clamp(1.3rem, 1.8vw, 1.8rem);
+  color: var(--gold-light);
+  font-style: italic;
+  opacity: 0.85;
+}
+
+.header-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 0.12rem auto;
+}
+
+.divider-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--divider-color), transparent);
+}
+
+.subtitle-text {
+  font-family: var(--font-display);
+  font-size: clamp(0.68rem, 0.82vw, 0.78rem);
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+}
+
+.venue-date {
+  font-family: var(--font-sans);
+  font-size: clamp(0.64rem, 0.74vw, 0.72rem);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-top: 0.15rem;
+}
+
+/* =========================================================
+   GROUP BUTTONS (Tables 1–5 · 6–10 · 11–15 · 16–20)
+   ========================================================= */
+
+.group-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0.35rem 0 0.75rem;
+}
+
+.group-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.group-tab {
+  font-family: var(--font-display);
+  font-size: clamp(0.84rem, 1vw, 1.02rem);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  padding: 0.52rem 1.25rem;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.group-tab:hover {
+  border-color: var(--accent-gold);
+}
+
+.group-tab.active {
+  background: var(--gold-gradient);
+  color: #141210;
+  border-color: transparent;
+  font-weight: 600;
+  box-shadow: 0 4px 16px rgba(212, 175, 55, 0.35);
+}
+
+.group-progress-track {
+  width: min(380px, 55%);
+  height: 2px;
+  background: var(--card-border-inner);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.group-progress {
+  height: 100%;
+  width: 0;
+  background: var(--gold-gradient);
+}
+
+.group-progress.running {
+  animation: groupProgress linear forwards;
+}
+
+@keyframes groupProgress {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* =========================================================
+   5 TABLES GRID
+   ========================================================= */
+
+.tables-grid.grouped {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: clamp(0.75rem, 1.15vw, 1.5rem);
+  align-content: stretch;
+  transition: opacity 0.22s ease, transform 0.22s ease;
+}
+
+.tables-grid.grouped.is-fading {
+  opacity: 0;
+  transform: translateY(6px);
+}
+
+.table-card {
+  position: relative;
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow);
+  padding: clamp(0.85rem, 1.4vh, 1.4rem) clamp(0.7rem, 0.95vw, 1.15rem);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+}
+
+.table-card::after {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border: 1px solid var(--card-border-inner);
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+/* Subtle Burgundy & Sage Green family accents from Invitation Page 3 */
+.table-card.family-jokonya .table-card-header {
+  background: linear-gradient(180deg, rgba(107, 23, 36, 0.25) 0%, transparent 100%);
+  border-radius: 3px 3px 0 0;
+  padding-top: 0.2rem;
+}
+
+.table-card.family-juwao .table-card-header {
+  background: linear-gradient(180deg, rgba(78, 104, 82, 0.25) 0%, transparent 100%);
+  border-radius: 3px 3px 0 0;
+  padding-top: 0.2rem;
+}
+
+.table-card.vip-card {
+  background: linear-gradient(145deg, rgba(30, 24, 16, 0.95), rgba(15, 12, 8, 0.95));
+  border: 1.5px solid #E5C372;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.22), var(--card-shadow);
+}
+
+.table-card-header {
+  text-align: center;
+  margin-bottom: clamp(0.45rem, 1.1vh, 0.9rem);
+  padding-bottom: clamp(0.4rem, 0.85vh, 0.7rem);
+  border-bottom: 1px solid var(--divider-color);
+}
+
+.table-title {
+  font-family: var(--font-display);
+  font-size: min(2.35vh, 1.18vw);
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  line-height: 1.2;
+}
+
+.guest-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: min(0.8vh, 0.45vw);
+  text-align: center;
+  flex: 1;
+  justify-content: space-evenly;
+}
+
+.guest-item {
+  font-family: var(--font-serif);
+  font-size: min(2.6vh, 1.26vw);
+  font-weight: 400;
+  color: var(--text-primary);
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+  word-break: break-word;
+}
+
+.vip-card .guest-list {
+  justify-content: center;
+}
+
+.guest-item.vip-placeholder {
+  font-family: var(--font-display);
+  font-size: min(3.2vh, 1.6vw);
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  color: #FFF2CD;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.wedding-footer {
+  flex-shrink: 0;
+  text-align: center;
+  margin-top: 0.55rem;
+}
+
+.scripture-quote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(0.72rem, 0.85vw, 0.86rem);
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+  opacity: 0.88;
+}
+
+/* =========================================================
+   MOBILE & TABLET OPTIMIZATION
+   ========================================================= */
+
+@media (max-width: 950px) {
+  .seating-board-wrapper {
+    padding: calc(0.5rem + env(safe-area-inset-top, 0px)) 0.85rem calc(0.45rem + env(safe-area-inset-bottom, 0px)) 0.85rem;
+  }
+
+  .corner-flourish {
+    width: 65px;
+    height: 65px;
+    opacity: 0.45;
+  }
+
+  .tables-grid.grouped {
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.8rem;
+    align-content: start;
+    padding: 0.15rem;
+  }
+
+  .table-title { font-size: 1.05rem; }
+  .guest-item { font-size: 1.12rem; line-height: 1.4; }
+  .guest-item.vip-placeholder { font-size: 1.35rem; padding: 1.5rem 0; }
+  .guest-list { gap: 0.25rem; }
+}
+
+@media (max-width: 640px) {
+  .corner-flourish {
+    width: 48px;
+    height: 48px;
+    opacity: 0.35;
+  }
+  .corner-top-left { top: 4px; left: 4px; }
+  .corner-bottom-right { bottom: 4px; right: 4px; }
+
+  .wedding-header {
+    margin-bottom: 0.2rem;
+  }
+
+  .monogram-svg {
+    width: 40px;
+    height: 28px;
+  }
+
+  .wedding-prefix {
+    font-size: 0.6rem;
+    letter-spacing: 0.22em;
+  }
+
+  .names-container {
+    gap: 0.3rem;
+    margin-bottom: 0.08rem;
+  }
+
+  .person-name {
+    font-size: clamp(1.35rem, 6vw, 1.7rem);
+  }
+
+  .ampersand {
+    font-size: 1rem;
+  }
+
+  .header-divider {
+    max-width: 85%;
+    margin: 0.08rem auto;
+  }
+
+  .subtitle-text {
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+  }
+
+  .venue-date {
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+  }
+
+  .group-nav {
+    margin: 0.25rem 0 0.4rem;
+    gap: 0.3rem;
+  }
+
+  .group-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    gap: 0.35rem;
+  }
+
+  .group-tab {
+    font-size: 0.76rem;
+    letter-spacing: 0.08em;
+    padding: 0.48rem 0.3rem;
+    min-height: 36px;
+  }
+
+  .tables-grid.grouped {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .table-card {
+    padding: 0.9rem 0.85rem;
+  }
+
+  .table-card-header {
+    margin-bottom: 0.45rem;
+    padding-bottom: 0.35rem;
+  }
+
+  .table-title {
+    font-size: 1.1rem;
+  }
+
+  .guest-list {
+    gap: 0.26rem;
+  }
+
+  .guest-item {
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+
+  .guest-item.vip-placeholder {
+    font-size: 1.4rem;
+    padding: 1.2rem 0;
+  }
+
+  .wedding-footer {
+    margin-top: 0.3rem;
+    padding-top: 0.25rem;
+    border-top: 1px solid var(--card-border-inner);
+  }
+
+  .scripture-quote {
+    font-size: 0.65rem;
+    line-height: 1.25;
+  }
+}
