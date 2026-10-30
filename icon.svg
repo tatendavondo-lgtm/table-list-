@@ -1,10 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#F5E5B8"/><stop offset=".5" stop-color="#D4AF37"/><stop offset="1" stop-color="#A27B2B"/>
-    </linearGradient>
-  </defs>
-  <rect width="100" height="100" rx="22" fill="#0B0B0E"/>
-  <rect x="6" y="6" width="88" height="88" rx="17" fill="none" stroke="url(#g)" stroke-width="2"/>
-  <text x="50" y="66" text-anchor="middle" font-family="Georgia, serif" font-size="42" fill="url(#g)" letter-spacing="-2">TC</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <rect width="120" height="120" rx="22" fill="#FAF6F0"/>
+  <rect x="7" y="7" width="106" height="106" rx="16" fill="none" stroke="#B87B28" stroke-width="2"/>
+  <text x="60" y="74" text-anchor="middle" font-family="Georgia, serif" font-size="44" font-weight="600" fill="#1A1612" letter-spacing="2">TE</text>
 </svg>

@@ -1,319 +1,385 @@
 /**
- * Wedding Seating Chart — Tinotenda Callisto Jokonya & Chiedza Kayla Juwao
- * Groups of 5 Tables (Tables 1 to 20, Table 7 = VIP)
+ * Wedding Seating Chart — Tawanda Mutyebere & Eunice Makura
+ * Sunday, 06 December 2026 • 2PM • Wildcard Farm, Beatrice
+ * 25 Tables displayed in 5 groups of 5 tables
  */
 
 const TABLES = [
   {
-    id: "tbl-1",
-    name: "Table 1 • Jokonya",
-    isVip: false,
+    id: "tbl-vip",
+    name: "VIP Table",
+    shortLabel: "VIP",
+    isVip: true,
     guests: [
-      "Dr C Jokonya",
-      "Mrs L Jokonya",
-      "Mr J Jokonya",
-      "Mrs C Jokonya",
-      "Dr C Tazarurwa",
-      "Mrs F Jokonya",
-      "Mrs P Jokonya",
-      "Dr C Tazarurwa",
-      "Tete Tsistsi chimutwe",
-      "Mbuya Manyame"
-    ]
-  },
-  {
-    id: "tbl-2",
-    name: "Table 2 • Juwao",
-    isVip: false,
-    guests: [
-      "Mr S Zhuwao",
-      "Mrs S Zhuwao",
-      "Mr Jongwe",
-      "Mrs F R Juwao",
-      "Winnet Zhuwao",
-      "Susan Zhuwao",
-      "Mr Tarwirei Zhuwao",
-      "Mr. Norman Zhuwao",
-      "Mr. Simbisai Zhuwao",
-      "Mbuya Zhuwao"
-    ]
-  },
-  {
-    id: "tbl-3",
-    name: "Table 3 • Jokonya",
-    isVip: false,
-    guests: [
-      "Ambassador Dr. Tamer Almasri",
-      "Ms K Bopoto",
-      "Mr Chikanda",
-      "Mrs Chikanda",
-      "Sabhuku T P Mliswa",
-      "Dr Norma Mliswa",
-      "Hon M Phiri",
-      "Mrs A Phiri",
-      "Dr K Tagwirei",
-      "Mrs Tagwirei"
+      "CBZ Bank (4)",
+      "Stanbic Bank (4)",
+      "NMB Bank (4)",
+      "EcoBank (4)",
+      "Total Energies (4)",
+      "Zuva Petroleum (4)",
+      "Mr & Mrs Tungwarara",
+      "Mr & Mrs Mukatu"
     ]
   },
   {
     id: "tbl-4",
-    name: "Table 4 • Juwao",
+    name: "Table 4",
+    shortLabel: "4",
     isVip: false,
     guests: [
-      "Mr Mapuranga",
-      "Mrs Mapuranga",
-      "Mr G Gwimbi",
-      "Mrs G Gwimbi",
-      "Mr J Gwimbi",
-      "Mr Chendume",
-      "Mrs Chendume",
-      "Mr Lioga",
-      "Mrs Lioga",
-      "Mbuya Gwimbi"
+      "Mr & Mrs Madziyire Josphate",
+      "Mr & Mrs Madziyire Joseph",
+      "Mrs Sekiwa",
+      "Mr & Mrs Mugovo"
     ]
   },
   {
     id: "tbl-5",
-    name: "Table 5 • Jokonya",
+    name: "Table 5",
+    shortLabel: "5",
     isVip: false,
     guests: [
-      "Hon W Chitando",
-      "Mrs I Chitando",
-      "Mr G Guvamatanga",
-      "Mrs Guvamatanga",
-      "Mr M Hungwe",
-      "Mrs Hungwe",
-      "Mr C Malunga",
-      "Mrs Malunga",
-      "Mr L Mutasa",
-      "Mrs M Mutasa"
+      "Mr & Mrs Nyamayevhu",
+      "Mr & Mrs Devera",
+      "Mr & Mrs Chimedza",
+      "Mr & Mrs Deredzai",
+      "Mr & Mrs Gomba"
     ]
   },
   {
     id: "tbl-6",
-    name: "Table 6 • Juwao",
+    name: "Table 6",
+    shortLabel: "6",
     isVip: false,
     guests: [
-      "Mrs Masendu",
-      "Ms Felly Gwimbi",
-      "Mrs Makanga",
-      "Mr Makanga",
-      "Mrs Gwimbi - Felix",
-      "Mrs Gwimbi - Fidelis",
-      "Mr Muzondo",
-      "Mr Mutsvedu",
-      "Mrs Mutsvedu"
+      "Mr & Mrs Matuzula",
+      "Mr & Mrs Mazango",
+      "Mr & Mrs Nyatsime",
+      "Mr & Mrs Matsinde",
+      "Mr & Mrs Nguwaya"
     ]
   },
   {
     id: "tbl-7",
-    name: "Table 7 • VIP",
-    isVip: true,
+    name: "Table 7",
+    shortLabel: "7",
+    isVip: false,
     guests: [
-      "VIP"
+      "Dr, Bishop & Amai Madziyire",
+      "Mr & Mrs Sasa",
+      "Bishop & Amai Madawo",
+      "Bishop Nehemaya Mutendi +5",
+      "Mr & Mrs Hebert Mutendi",
+      "ZCC Chaka +4"
     ]
   },
   {
     id: "tbl-8",
-    name: "Table 8 • Juwao",
+    name: "Table 8",
+    shortLabel: "8",
     isVip: false,
     guests: [
-      "Mr Mutandiro",
-      "Mrs Mutandiro",
-      "Mr Munyaradzi",
-      "Mrs Munyaradzi",
-      "Mrs Machana",
-      "Ms Faith Gwimbi",
-      "Mr Chibanda",
-      "Mrs Chibanda",
-      "Mr Mutsengi",
-      "Mrs Mutsengi"
+      "Vongai Musungwa",
+      "Mr & Mrs Musungwa Tinashe",
+      "Mr & Mrs Mupandare",
+      "Mr & Mrs Chirovamhangu",
+      "Mr & Mrs Benard"
     ]
   },
   {
     id: "tbl-9",
-    name: "Table 9 • Jokonya",
+    name: "Table 9",
+    shortLabel: "9",
     isVip: false,
     guests: [
-      "Mainini Louisa",
-      "Mainini Nessia",
-      "Ms Tsitsi Mapako",
-      "Mr Fundikwa",
-      "Mrs Fundikwa",
-      "Mr Manyepwa",
-      "Mrs Manyepwa",
-      "Mr Kandiwa",
-      "Mrs Kandiwa",
-      "Ms K Madzokere"
+      "Mercy Ganyani",
+      "Shingirirai Chigaduro",
+      "Mr & Mrs Chiwa",
+      "Ms Eustina Tabvanei"
     ]
   },
   {
     id: "tbl-10",
-    name: "Table 10 • Juwao",
+    name: "Table 10",
+    shortLabel: "10",
     isVip: false,
     guests: [
-      "Mr N Juwao",
-      "Ms T Gogwe",
-      "Tanaka Mukuna",
-      "Charles Jorgensen",
-      "Wellington Muramba",
-      "Beryl Matambo",
-      "Mrs Mudawapi"
+      "Mr & Mrs Kangai Jaspher",
+      "Scholastic Chikwinya",
+      "Mr & Mrs Blessing",
+      "Mr & Mrs Mutsa Shonhiwa",
+      "Mr & Mrs Chiropa Clemence",
+      "Mr & Mrs Nyangari Jetro"
     ]
   },
   {
     id: "tbl-11",
-    name: "Table 11 • Jokonya",
+    name: "Table 11",
+    shortLabel: "11",
     isVip: false,
     guests: [
-      "Mr M Jokonya",
-      "Mr F Jokonya",
-      "Miss T Jokonya",
-      "Cranos Jokonya",
-      "Chiedza Jokonya",
-      "Kudzai Rukukwa",
-      "Mandy Musikavanhu",
-      "Kudzai Rukukwa +1",
-      "Mandy Musikavanhu +1",
-      "Lorell"
+      "Mr & Mrs Darare Brenda",
+      "Mr & Mrs Mungate Paddington",
+      "Mr & Mrs Tobaiwa Taurai",
+      "Mr & Mrs Dzumbira Tatenda",
+      "Mr & Mrs Gwena"
     ]
   },
   {
     id: "tbl-12",
-    name: "Table 12 • Jokonya",
+    name: "Table 12",
+    shortLabel: "12",
     isVip: false,
     guests: [
-      "Mr Bvuma",
-      "Mrs Bvuma",
-      "Mrs T Mutimsakwa",
-      "Mr J Muthundura",
-      "Mrs Muthundura",
-      "Mr Makopa",
-      "Mr K Tembo",
-      "Mrs M Tembo",
-      "Memory Jokonya",
-      "Ms S Mukaro"
+      "Mr & Mrs Chasowa Abena",
+      "Mr & Mrs Moyana",
+      "Mr & Mrs Mazara",
+      "Mr & Mrs Mudhadhadha"
     ]
   },
   {
     id: "tbl-13",
-    name: "Table 13 • Jokonya",
+    name: "Table 13",
+    shortLabel: "13",
     isVip: false,
     guests: [
-      "Mrs S Chidawu",
-      "Rev S Mhindu",
-      "Mr Ruhukwa",
-      "Mrs Ruhukwa",
-      "Mr Deda",
-      "Mrs Deda",
-      "Mr Masviba",
-      "Mr Jinya",
-      "Dr Jinya"
+      "Mr & Mrs Fernandis Paul",
+      "Mr Stuart",
+      "Mr & Mrs Hwenga",
+      "Mr & Mrs Chidhakwa",
+      "Mrs Nomusa",
+      "Rosie Sanyangore +1"
     ]
   },
   {
     id: "tbl-14",
-    name: "Table 14 • Juwao",
+    name: "Table 14",
+    shortLabel: "14",
     isVip: false,
     guests: [
-      "Mr Mutsinze",
-      "Mrs Mutsinze",
-      "Mr Matambo",
-      "Mrs Matambo",
-      "Mr Ncube",
-      "Mrs Ncube",
-      "Mr Chimanga",
-      "Mrs Chimanga"
+      "Mr & Mrs Chandiwana",
+      "Mr & Mrs Mufudze",
+      "Mr & Mrs Takawira",
+      "Mr & Mrs Dr Chimhini",
+      "Mr & Mrs Madhombiro"
     ]
   },
   {
     id: "tbl-15",
-    name: "Table 15 • Jokonya",
+    name: "Table 15",
+    shortLabel: "15",
     isVip: false,
     guests: [
-      "Rev G Run'anga",
-      "Mrs B Run'anga",
-      "Rev J Kawadza",
-      "Mrs Kawadza",
-      "Rev A Makiwa",
-      "Mrs Makiwa",
-      "Rev F Mushishiware",
-      "Mrs Mushishiware",
-      "Mai R Gavaza",
-      "Mai A Rugara"
+      "Mr & Mrs Mandeya",
+      "Dr Mr & Mrs Tagwirei Kudakwashe",
+      "Mr & Mrs Kondongwe Stanley",
+      "Mr & Mrs Gumbochuma Justine",
+      "Mr & Mrs Mulalazi Everton (VIP)"
     ]
   },
   {
     id: "tbl-16",
-    name: "Table 16 • Juwao",
+    name: "Table 16",
+    shortLabel: "16",
     isVip: false,
     guests: [
-      "Tobias Murahwa",
-      "Toby's +1",
-      "Iphithule Shumbanhete",
-      "Rodney Shumbanhete",
-      "Mr Nyoni",
-      "Mrs Nyoni",
-      "Talent Basera",
-      "Dominic Masaire",
-      "Tinashe Ncube",
-      "Tinokudzaishe Elijah"
-    ]
-  },
-  {
-    id: "tbl-17",
-    name: "Table 17 • Jokonya",
-    isVip: false,
-    guests: [
-      "Rev Kadenge",
-      "Mrs Kadenge",
-      "Rev Chikwese",
-      "Mrs Chikwese",
-      "Mrs Madzima",
-      "Mrs H Munyonga",
-      "Mr Marangwanda",
-      "Mr Mwedzi",
-      "Mrs Mwedzi"
-    ]
-  },
-  {
-    id: "tbl-18",
-    name: "Table 18 • Juwao",
-    isVip: false,
-    guests: [
-      "Portia Madede",
-      "Rutendo Munyaradzi",
-      "Mrs Nyamande",
-      "Brenda Garufu",
-      "Mr T Machana"
-    ]
-  },
-  {
-    id: "tbl-19",
-    name: "Table 19 • Jokonya",
-    isVip: false,
-    guests: [
-      "Mr Muwani",
-      "Mrs Muwani",
-      "Mrs Tembedza",
-      "Nyasha Tembedza"
+      "Mr & Mrs Chiwaya",
+      "Aunty Abbey & Husband",
+      "Mr & Mrs Matiyenga Victor",
+      "Mr & Mrs Chenjerai Paul +3"
     ]
   },
   {
     id: "tbl-20",
-    name: "Table 20 • Jokonya",
+    name: "Table 20",
+    shortLabel: "20",
     isVip: false,
     guests: [
-      "Sinegugu Ndlovu",
-      "Hope Mathebula",
-      "Tony Misago",
-      "Emma Maboreke",
-      "Jarryd Basson",
-      "Mrs Basson",
-      "Courtney Mcelod",
-      "Thandiwe Munashe",
-      "Thandiwe Munashe +1",
-      "Tonderai Tsorayi"
+      "Mr & Mrs Kumbula",
+      "Alice Mutyebere",
+      "Mr & Mrs Shumbanhete",
+      "Mr & Mrs Makore (+2)",
+      "Mr & Mrs Musisinyani",
+      "Susan Mutyebere",
+      "Makomborere Kwangwa",
+      "Ropafadzo Kwangwa & Husband",
+      "Makanaka Kwangwa",
+      "Mr & Mrs Kwangwa Thomas",
+      "Mr & Mrs Kwangwa Tobias"
+    ]
+  },
+  {
+    id: "tbl-21",
+    name: "Table 21",
+    shortLabel: "21",
+    isVip: false,
+    guests: [
+      "Patience Kumbula & Husband",
+      "Maria Mutyebere & Husband",
+      "Dean Mutyebere",
+      "Mufaro Makore",
+      "Lilian Gasva & Husband",
+      "Linah Gasva & Husband",
+      "Tinotenda Mutyebere & Husband",
+      "Tsitsi Kwangwa & Husband",
+      "Mr & Mrs Kwangwa Tawanda",
+      "Mr & Mrs Kwangwa Kris",
+      "Mr & Mrs Kwangwa Simon",
+      "Wadzanai Kwangwa & Husband"
+    ]
+  },
+  {
+    id: "tbl-22",
+    name: "Table 22",
+    shortLabel: "22",
+    isVip: false,
+    guests: [
+      "Gogo Mutyebere",
+      "Mr & Mrs Mutyebere Pinto",
+      "Mr & Mrs Mutyebere Farai",
+      "Mr & Mrs Kwangwa Jaison",
+      "Mrs Kwangwa (Mai Edwin)",
+      "Mr & Mrs Musungwa William"
+    ]
+  },
+  {
+    id: "tbl-23",
+    name: "Table 23",
+    shortLabel: "23",
+    isVip: false,
+    guests: [
+      "Mrs Munzvenga",
+      "Kupakwashe Munzvenga & Wife",
+      "Mr & Mrs Kwangwa Oliver",
+      "Adrian Kwangwa & Husband",
+      "Tenda Kwangwa & Husband"
+    ]
+  },
+  {
+    id: "tbl-24",
+    name: "Table 24",
+    shortLabel: "24",
+    isVip: false,
+    guests: [
+      "Mr & Mrs Kumbula Lazarous",
+      "Mr & Mrs Kumbula Pardon",
+      "Shumirai Gondo & Husband",
+      "Mr & Mrs Makore Master",
+      "Mr & Mrs Mashiingaidze Norman",
+      "Mr & Mrs Kwangwa Snr",
+      "Mr & Mrs Kwangwa Tapison",
+      "Mr & Mrs Kwangwa Elias",
+      "Mr & Mrs Kwangwa Pio"
+    ]
+  },
+  {
+    id: "tbl-25",
+    name: "Table 25",
+    shortLabel: "25",
+    isVip: false,
+    guests: [
+      "Rumbi Shumbanhete & Husband",
+      "Mr & Mrs Shumbanhete Liberty",
+      "Roily Shumbanhete & Husband",
+      "Mr & Mrs Shumbanhete Paidaishe",
+      "Mr & Mrs Chiondegwa Benard",
+      "Mr & Mrs Chiondegwa Bothwell",
+      "Mr & Mrs Makore Milton",
+      "Mr & Mrs Mutyebere Wonder",
+      "Winnet Kwangwa & Husband",
+      "Rumbidzai Kwangwa & Husband",
+      "Caroline Kwangwa & Husband",
+      "Mr & Mrs Chingware Botha",
+      "Edwin Kwangwa",
+      "Cynthia Kwangwa"
+    ]
+  },
+  {
+    id: "tbl-26",
+    name: "Table 26",
+    shortLabel: "26",
+    isVip: false,
+    guests: [
+      "Sifelani Mabhachi +1",
+      "Nyarai Mabhachi +1",
+      "Tambudzai Mabhachi",
+      "Vongai Watura & Husband",
+      "Baba Gire & Wife",
+      "Mr & Mrs Kwangwa Talent",
+      "Mr & Mrs Chingware Stan",
+      "Mr & Mrs Mutyebere Simbarashe",
+      "Gogo Chingware (Mai Simba)",
+      "Mr & Mrs Chenjerai Benson"
+    ]
+  },
+  {
+    id: "tbl-27",
+    name: "Table 27",
+    shortLabel: "27",
+    isVip: false,
+    guests: [
+      "Pepe Kumbula & Husband",
+      "Mr & Mrs Kumbula Kim",
+      "Mr & Mrs Kumbula Richard",
+      "Mr & Mrs Shumbanhete Muraga",
+      "Loice Shumbanhete & Husband",
+      "Simbarashe Makura & Wife",
+      "Farai Makura",
+      "Ngoni Watura",
+      "Isheanopa Watura",
+      "Delight Ncube",
+      "Nyaradzo Chiwawa & Husband",
+      "Mr & Mrs Chenjerai Obert",
+      "Mr & Mrs Chenjerai Tawanda",
+      "Mr & Mrs Chenjerai Shadreck",
+      "Alice Chenjerai & Husband"
+    ]
+  },
+  {
+    id: "tbl-28",
+    name: "Table 28",
+    shortLabel: "28",
+    isVip: false,
+    guests: [
+      "Mr & Mrs Mutyebere John",
+      "Mr & Mrs Mutyebere Relax",
+      "Batsirai Makore",
+      "Makanaka Makore",
+      "Mutsawashe Makore",
+      "Tatenda Musisinyani",
+      "Bethel Musisinyani",
+      "Sergious Musisinyani",
+      "Gogo Mlambo",
+      "Sekuru & Gogo Mlambo",
+      "Praise Mlambo",
+      "Hazel Mlambo"
+    ]
+  },
+  {
+    id: "tbl-29",
+    name: "Table 29",
+    shortLabel: "29",
+    isVip: false,
+    guests: [
+      "Mr & Mrs Watura",
+      "Mr & Mrs Watura Jnr",
+      "Mr & Mrs Nasilile",
+      "Joy Makura & Husband",
+      "Mr & Mrs Kasuso"
+    ]
+  },
+  {
+    id: "tbl-30",
+    name: "Table 30",
+    shortLabel: "30",
+    isVip: false,
+    guests: [
+      "Tafadzwa Kasuso",
+      "Makanaka Kasuso",
+      "Mr & Mrs Mungofa",
+      "Tinashe Mungofa",
+      "Tadiwa Mungofa",
+      "Chido Makura & Husband"
     ]
   }
 ];
@@ -338,10 +404,13 @@ function getGroups() {
   return groups;
 }
 
-function groupLabel(groupIndex) {
-  const start = groupIndex * GROUP_SIZE + 1;
-  const end = Math.min(start + GROUP_SIZE - 1, TABLES.length);
-  return `Tables ${start} – ${end}`;
+function groupLabel(group) {
+  const first = group[0].shortLabel;
+  const last = group[group.length - 1].shortLabel;
+  if (first === "VIP") {
+    return `VIP & Tables ${group[1].shortLabel} – ${last}`;
+  }
+  return `Tables ${first} – ${last}`;
 }
 
 function buildTableCard(table) {
@@ -349,13 +418,13 @@ function buildTableCard(table) {
   card.className = "table-card";
   card.id = table.id;
 
-  const upperName = table.name.toUpperCase();
   if (table.isVip) {
     card.classList.add("vip-card");
-  } else if (upperName.includes("JOKONYA")) {
-    card.classList.add("family-jokonya");
-  } else if (upperName.includes("JUWAO")) {
-    card.classList.add("family-juwao");
+  }
+  if (table.guests.length >= 13) {
+    card.classList.add("dense-xl");
+  } else if (table.guests.length >= 11) {
+    card.classList.add("dense-lg");
   }
 
   const header = document.createElement("div");
@@ -369,19 +438,12 @@ function buildTableCard(table) {
   const list = document.createElement("ul");
   list.className = "guest-list";
 
-  if (table.isVip) {
+  table.guests.forEach(name => {
     const li = document.createElement("li");
-    li.className = "guest-item vip-placeholder";
-    li.textContent = "VIP";
+    li.className = "guest-item";
+    li.textContent = name;
     list.appendChild(li);
-  } else {
-    table.guests.forEach(name => {
-      const li = document.createElement("li");
-      li.className = "guest-item";
-      li.textContent = name;
-      list.appendChild(li);
-    });
-  }
+  });
 
   card.appendChild(header);
   card.appendChild(list);
@@ -392,11 +454,11 @@ function renderGroupTabs() {
   if (!groupTabs) return;
   groupTabs.innerHTML = "";
   const groups = getGroups();
-  groups.forEach((_, gi) => {
+  groups.forEach((group, gi) => {
     const btn = document.createElement("button");
     btn.type = "button";
     btn.className = "group-tab" + (gi === currentGroup ? " active" : "");
-    btn.textContent = groupLabel(gi);
+    btn.textContent = groupLabel(group);
     btn.addEventListener("click", () => {
       showGroup(gi);
       pauseAutoRotate();
@@ -456,6 +518,17 @@ function pauseAutoRotate() {
   resumeTimer = setTimeout(startAutoRotate, PAUSE_AFTER_TAP_MS);
 }
 
+// Keyboard arrow navigation
+window.addEventListener("keydown", (e) => {
+  if (e.key === "ArrowRight") {
+    showGroup(currentGroup + 1);
+    pauseAutoRotate();
+  } else if (e.key === "ArrowLeft") {
+    showGroup(currentGroup - 1);
+    pauseAutoRotate();
+  }
+});
+
 // Swipe left/right on mobile to switch group
 let touchStartX = null;
 let touchStartY = null;
@@ -475,7 +548,7 @@ tablesGrid.addEventListener("touchend", (e) => {
   }
 }, { passive: true });
 
-// Automatically enter fullscreen on load or first interaction (no popups or extra buttons)
+// Automatically enter fullscreen on load or first interaction
 function tryEnterFullscreen() {
   if (document.fullscreenElement || document.webkitFullscreenElement) return;
   const el = document.documentElement;

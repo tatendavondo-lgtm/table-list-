@@ -1,27 +1,29 @@
 /* =========================================================
-   TINOTENDA & CHIEDZA WEDDING SEATING CHART
-   Invitation Match: Black, Gold, Burgundy & Sage Green
+   TAWANDA MUTYEBERE & EUNICE MAKURA — WEDDING SEATING CHART
+   Light Mode Invitation Match: Warm Ivory & Pearl Backdrop,
+   Subtle Couple Portrait Watermark, Rounded Hairline Frame,
+   Exact Invitation Flourish, Signature Script & Amber Gold
    ========================================================= */
 
 :root {
-  --font-serif: 'Cardo', Georgia, serif;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
   --font-display: 'Cinzel', serif;
-  --font-script: 'Pinyon Script', cursive;
+  --font-script: 'Allura', 'Alex Brush', cursive;
   --font-sans: 'Montserrat', sans-serif;
 
-  --bg-color: #080809;
-  --bg-gradient: radial-gradient(circle at 50% 20%, #16171B 0%, #08080A 80%);
-  --text-primary: #EDE8DF;
-  --text-secondary: #B5A895;
-  --card-bg: rgba(18, 18, 22, 0.88);
-  --card-border: rgba(212, 175, 55, 0.35);
-  --card-border-inner: rgba(212, 175, 55, 0.14);
-  --card-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
-  --accent-gold: #DFBA5E;
-  --gold-light: #F4E2AA;
-  --gold-gradient: linear-gradient(135deg, #F5E5B8 0%, #D4AF37 50%, #A27B2B 100%);
-  --divider-color: rgba(212, 175, 55, 0.4);
-  --ambient-glow: rgba(212, 175, 55, 0.08);
+  --bg-color: #FAF6F0;
+  --text-primary: #1A1612;
+  --text-secondary: #4A3F33;
+  --accent-amber: #B87B28;
+  --accent-amber-dark: #945F16;
+  --accent-amber-soft: #D89B3C;
+  --amber-gradient: linear-gradient(135deg, #E2AE5C 0%, #C4852C 55%, #9B6418 100%);
+  --frame-border: rgba(184, 123, 40, 0.65);
+  --card-bg: rgba(255, 255, 255, 0.88);
+  --card-border: rgba(184, 123, 40, 0.42);
+  --card-border-inner: rgba(26, 22, 18, 0.09);
+  --card-shadow: 0 10px 28px rgba(42, 30, 14, 0.08);
+  --divider-color: rgba(184, 123, 40, 0.42);
 }
 
 * {
@@ -37,54 +39,45 @@ html, body {
   overflow: hidden;
   overscroll-behavior: none;
   background-color: var(--bg-color);
-  background-image: var(--bg-gradient);
   color: var(--text-primary);
   font-family: var(--font-serif);
   -webkit-font-smoothing: antialiased;
 }
 
-.texture-overlay {
+/* Soft Light-Mode Couple Portrait Watermark from Invitation PDF */
+.photo-backdrop {
   position: fixed;
   inset: 0;
-  opacity: 0.04;
-  background-image: radial-gradient(#FFFFFF 1px, transparent 1px);
-  background-size: 4px 4px;
+  background-image: url('bg-couple.png');
+  background-size: cover;
+  background-position: center 26%;
+  background-repeat: no-repeat;
+  filter: grayscale(100%) contrast(0.92) brightness(1.18);
+  mix-blend-mode: multiply;
+  opacity: 0.14;
   pointer-events: none;
   z-index: 1;
 }
 
-.ambient-glow {
+.vignette-overlay {
   position: fixed;
-  top: -10vh;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80vw;
-  height: 55vh;
-  border-radius: 50%;
-  background: var(--ambient-glow);
-  filter: blur(120px);
-  pointer-events: none;
-  z-index: 1;
-}
-
-/* Ornate Golden Corner Flourishes */
-.corner-flourish {
-  position: fixed;
-  width: clamp(85px, 10vw, 160px);
-  height: clamp(85px, 10vw, 160px);
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 32%, rgba(255, 253, 249, 0.58) 0%, rgba(248, 242, 232, 0.86) 85%),
+    linear-gradient(180deg, rgba(252, 249, 244, 0.72) 0%, rgba(250, 246, 240, 0.48) 45%, rgba(246, 239, 228, 0.82) 100%);
   pointer-events: none;
   z-index: 2;
-  opacity: 0.85;
 }
 
-.corner-top-left {
-  top: 8px;
-  left: 8px;
-}
-
-.corner-bottom-right {
-  bottom: 8px;
-  right: 8px;
+/* Crisp Rounded Hairline Frame matching the Wedding Invitation Card */
+.invitation-frame {
+  position: fixed;
+  inset: 14px;
+  border: 1.25px solid var(--frame-border);
+  border-radius: 16px;
+  box-shadow: inset 0 0 0 4px rgba(255, 255, 255, 0.45);
+  pointer-events: none;
+  z-index: 4;
 }
 
 /* =========================================================
@@ -100,7 +93,7 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1rem 2.6rem 0.9rem 2.6rem;
+  padding: 1.25rem 2.5rem 1.05rem 2.5rem;
   max-width: 1920px;
   margin: 0 auto;
   overflow: hidden;
@@ -111,162 +104,205 @@ html, body {
 }
 
 /* =========================================================
-   HEADER
+   HEADER (Matches Invitation Typography & Hierarchy)
    ========================================================= */
 
 .wedding-header {
   text-align: center;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.28rem;
 }
 
-.monogram-crest {
+.dear-guest {
+  font-family: var(--font-display);
+  font-size: clamp(0.68rem, 0.84vw, 0.82rem);
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+.ornament-divider {
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-bottom: -4px;
+  margin: 0.14rem 0 0.12rem;
+  color: var(--accent-amber);
 }
 
-.monogram-svg {
-  width: 60px;
-  height: 44px;
+.ornament-svg {
+  width: clamp(145px, 13.5vw, 195px);
+  height: 18px;
 }
 
-.monogram-letter {
-  font-family: 'Cinzel', serif;
-  font-size: 38px;
-  fill: url(#goldGrad);
-  font-weight: 600;
-  letter-spacing: -3px;
-}
-
-.letter-t {
-  transform: translateX(-6px);
-}
-
-.letter-c {
-  font-family: 'Pinyon Script', cursive;
-  font-size: 46px;
-  transform: translate(6px, 2px);
-  opacity: 0.95;
-}
-
-.wedding-prefix {
+.joy-line {
   font-family: var(--font-display);
-  font-size: clamp(0.74rem, 0.95vw, 0.9rem);
-  letter-spacing: 0.28em;
+  font-size: clamp(0.62rem, 0.76vw, 0.75rem);
+  font-weight: 500;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--text-secondary);
-  margin-bottom: 0.1rem;
+  margin-bottom: 0.04rem;
 }
 
 .names-container {
   display: flex;
   align-items: baseline;
   justify-content: center;
-  gap: 0.65rem;
+  gap: 0.85rem;
   flex-wrap: wrap;
-  line-height: 1.1;
-  margin-bottom: 0.15rem;
+  line-height: 1.05;
+  margin: 0.02rem 0 0.18rem;
 }
 
 .person-name {
   font-family: var(--font-script);
-  font-size: clamp(1.9rem, 3vw, 2.95rem);
-  color: var(--accent-gold);
-  text-shadow: 0 0 12px rgba(212, 175, 55, 0.35);
+  font-size: clamp(2.15rem, 3.35vw, 3.25rem);
+  font-weight: 400;
+  color: var(--text-primary);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.9);
   white-space: nowrap;
 }
 
-.ampersand {
-  font-family: var(--font-serif);
-  font-size: clamp(1.3rem, 1.8vw, 1.8rem);
-  color: var(--gold-light);
-  font-style: italic;
-  opacity: 0.85;
+.and-word {
+  font-family: var(--font-display);
+  font-size: clamp(0.78rem, 0.98vw, 0.95rem);
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  color: var(--accent-amber);
+  text-transform: uppercase;
 }
 
-.header-divider {
+.event-meta-row {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  max-width: 500px;
-  margin: 0.12rem auto;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 0.05rem;
 }
 
-.divider-line {
-  flex: 1;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--divider-color), transparent);
+.invitation-date-block {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
 }
 
-.subtitle-text {
+.date-col-side {
   font-family: var(--font-display);
-  font-size: clamp(0.68rem, 0.82vw, 0.78rem);
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  color: var(--accent-gold);
-}
-
-.venue-date {
-  font-family: var(--font-sans);
-  font-size: clamp(0.64rem, 0.74vw, 0.72rem);
+  font-size: clamp(0.74rem, 0.9vw, 0.88rem);
+  font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--text-secondary);
-  margin-top: 0.15rem;
+  color: var(--text-primary);
+}
+
+.date-col-center {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  font-family: var(--font-display);
+  color: var(--text-primary);
+}
+
+.date-day {
+  font-size: clamp(0.95rem, 1.18vw, 1.16rem);
+  font-weight: 700;
+  color: var(--accent-amber-dark);
+  letter-spacing: 0.06em;
+}
+
+.date-month-year {
+  font-size: clamp(0.74rem, 0.9vw, 0.88rem);
+  font-weight: 600;
+  letter-spacing: 0.16em;
+}
+
+.meta-gold-divider {
+  width: 1.5px;
+  height: 18px;
+  background: var(--accent-amber);
+  opacity: 0.85;
+}
+
+.meta-dot {
+  color: var(--accent-amber);
+  font-size: 0.9rem;
+}
+
+.invitation-venue-block {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.45rem;
+}
+
+.venue-script {
+  font-family: var(--font-script);
+  font-size: clamp(1.5rem, 2.05vw, 2.05rem);
+  color: var(--accent-amber-dark);
+  line-height: 1;
+}
+
+.venue-city {
+  font-family: var(--font-serif);
+  font-size: clamp(0.74rem, 0.9vw, 0.86rem);
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-primary);
 }
 
 /* =========================================================
-   GROUP BUTTONS (Tables 1–5 · 6–10 · 11–15 · 16–20)
+   GROUP BUTTONS (5 Groups of 5 Tables)
    ========================================================= */
 
 .group-nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.4rem;
-  margin: 0.35rem 0 0.75rem;
+  gap: 0.35rem;
+  margin: 0.3rem 0 0.55rem;
 }
 
 .group-tabs {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.6rem;
+  gap: 0.5rem;
 }
 
 .group-tab {
   font-family: var(--font-display);
-  font-size: clamp(0.84rem, 1vw, 1.02rem);
+  font-size: clamp(0.74rem, 0.88vw, 0.88rem);
+  font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--text-primary);
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  padding: 0.52rem 1.25rem;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(184, 123, 40, 0.45);
+  padding: 0.44rem 1.1rem;
   border-radius: 40px;
   cursor: pointer;
-  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  box-shadow: 0 2px 8px rgba(42, 30, 14, 0.05);
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
   -webkit-tap-highlight-color: transparent;
 }
 
 .group-tab:hover {
-  border-color: var(--accent-gold);
+  border-color: var(--accent-amber-dark);
+  background: #FFFFFF;
 }
 
 .group-tab.active {
-  background: var(--gold-gradient);
-  color: #141210;
+  background: var(--amber-gradient);
+  color: #FFFFFF;
   border-color: transparent;
   font-weight: 600;
-  box-shadow: 0 4px 16px rgba(212, 175, 55, 0.35);
+  box-shadow: 0 4px 16px rgba(184, 123, 40, 0.34);
 }
 
 .group-progress-track {
-  width: min(380px, 55%);
-  height: 2px;
-  background: var(--card-border-inner);
+  width: min(400px, 55%);
+  height: 2.5px;
+  background: rgba(184, 123, 40, 0.18);
   border-radius: 2px;
   overflow: hidden;
 }
@@ -274,7 +310,7 @@ html, body {
 .group-progress {
   height: 100%;
   width: 0;
-  background: var(--gold-gradient);
+  background: var(--amber-gradient);
 }
 
 .group-progress.running {
@@ -295,7 +331,7 @@ html, body {
   min-height: 0;
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: clamp(0.75rem, 1.15vw, 1.5rem);
+  gap: clamp(0.7rem, 1.1vw, 1.35rem);
   align-content: stretch;
   transition: opacity 0.22s ease, transform 0.22s ease;
 }
@@ -312,8 +348,8 @@ html, body {
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid var(--card-border);
   box-shadow: var(--card-shadow);
-  padding: clamp(0.85rem, 1.4vh, 1.4rem) clamp(0.7rem, 0.95vw, 1.15rem);
-  border-radius: 4px;
+  padding: clamp(0.75rem, 1.2vh, 1.2rem) clamp(0.65rem, 0.9vw, 1.05rem);
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
 }
@@ -321,45 +357,37 @@ html, body {
 .table-card::after {
   content: '';
   position: absolute;
-  inset: 3px;
+  inset: 5px;
   border: 1px solid var(--card-border-inner);
-  border-radius: 2px;
+  border-radius: 8px;
   pointer-events: none;
 }
 
-/* Subtle Burgundy & Sage Green family accents from Invitation Page 3 */
-.table-card.family-jokonya .table-card-header {
-  background: linear-gradient(180deg, rgba(107, 23, 36, 0.25) 0%, transparent 100%);
-  border-radius: 3px 3px 0 0;
-  padding-top: 0.2rem;
-}
-
-.table-card.family-juwao .table-card-header {
-  background: linear-gradient(180deg, rgba(78, 104, 82, 0.25) 0%, transparent 100%);
-  border-radius: 3px 3px 0 0;
-  padding-top: 0.2rem;
-}
-
 .table-card.vip-card {
-  background: linear-gradient(145deg, rgba(30, 24, 16, 0.95), rgba(15, 12, 8, 0.95));
-  border: 1.5px solid #E5C372;
-  box-shadow: 0 0 20px rgba(212, 175, 55, 0.22), var(--card-shadow);
+  background: linear-gradient(160deg, rgba(255, 252, 245, 0.96), rgba(249, 239, 222, 0.92));
+  border: 1.5px solid rgba(184, 123, 40, 0.78);
+  box-shadow: 0 10px 28px rgba(184, 123, 40, 0.16);
+}
+
+.table-card.vip-card::after {
+  border-color: rgba(184, 123, 40, 0.24);
 }
 
 .table-card-header {
   text-align: center;
-  margin-bottom: clamp(0.45rem, 1.1vh, 0.9rem);
-  padding-bottom: clamp(0.4rem, 0.85vh, 0.7rem);
+  margin-bottom: clamp(0.35rem, 0.8vh, 0.65rem);
+  padding-bottom: clamp(0.28rem, 0.65vh, 0.5rem);
   border-bottom: 1px solid var(--divider-color);
+  flex-shrink: 0;
 }
 
 .table-title {
   font-family: var(--font-display);
-  font-size: min(2.35vh, 1.18vw);
-  letter-spacing: 0.12em;
-  font-weight: 600;
+  font-size: min(2.15vh, 1.12vw);
+  letter-spacing: 0.16em;
+  font-weight: 700;
   text-transform: uppercase;
-  color: var(--accent-gold);
+  color: var(--accent-amber-dark);
   line-height: 1.2;
 }
 
@@ -367,51 +395,56 @@ html, body {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: min(0.8vh, 0.45vw);
+  gap: min(1.02vh, 0.52vw);
   text-align: center;
   flex: 1;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .guest-item {
   font-family: var(--font-serif);
-  font-size: min(2.6vh, 1.26vw);
-  font-weight: 400;
+  font-size: min(2.42vh, 1.18vw);
+  font-weight: 600;
   color: var(--text-primary);
-  line-height: 1.3;
-  letter-spacing: 0.02em;
+  line-height: 1.24;
+  letter-spacing: 0.015em;
   word-break: break-word;
 }
 
-.vip-card .guest-list {
-  justify-content: center;
+/* Auto-fit larger tables (11–15 guest entries) so they never overflow */
+.table-card.dense-lg .guest-item {
+  font-size: min(2.08vh, 1.05vw);
+  line-height: 1.18;
+}
+.table-card.dense-lg .guest-list {
+  gap: min(0.34vh, 0.22vw);
 }
 
-.guest-item.vip-placeholder {
-  font-family: var(--font-display);
-  font-size: min(3.2vh, 1.6vw);
-  font-weight: 600;
-  letter-spacing: 0.22em;
-  color: #FFF2CD;
+.table-card.dense-xl .guest-item {
+  font-size: min(1.8vh, 0.95vw);
+  line-height: 1.14;
+}
+.table-card.dense-xl .guest-list {
+  gap: min(0.22vh, 0.16vw);
 }
 
 /* =========================================================
-   FOOTER
+   FOOTER (Matches Invitation Bottom Script)
    ========================================================= */
 
 .wedding-footer {
   flex-shrink: 0;
   text-align: center;
-  margin-top: 0.55rem;
+  margin-top: 0.35rem;
 }
 
-.scripture-quote {
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-size: clamp(0.72rem, 0.85vw, 0.86rem);
-  letter-spacing: 0.04em;
-  color: var(--text-secondary);
-  opacity: 0.88;
+.scanning-note {
+  font-family: var(--font-script);
+  font-size: clamp(1.3rem, 1.8vw, 1.8rem);
+  color: var(--text-primary);
+  letter-spacing: 0.03em;
+  opacity: 0.92;
+  line-height: 1.1;
 }
 
 /* =========================================================
@@ -419,14 +452,13 @@ html, body {
    ========================================================= */
 
 @media (max-width: 950px) {
-  .seating-board-wrapper {
-    padding: calc(0.5rem + env(safe-area-inset-top, 0px)) 0.85rem calc(0.45rem + env(safe-area-inset-bottom, 0px)) 0.85rem;
+  .invitation-frame {
+    inset: 8px;
+    border-radius: 12px;
   }
 
-  .corner-flourish {
-    width: 65px;
-    height: 65px;
-    opacity: 0.45;
+  .seating-board-wrapper {
+    padding: calc(0.8rem + env(safe-area-inset-top, 0px)) 1.1rem calc(0.7rem + env(safe-area-inset-bottom, 0px)) 1.1rem;
   }
 
   .tables-grid.grouped {
@@ -434,127 +466,151 @@ html, body {
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: max-content;
     gap: 0.8rem;
     align-content: start;
-    padding: 0.15rem;
+    padding: 0.15rem 0.2rem;
   }
 
   .table-title { font-size: 1.05rem; }
-  .guest-item { font-size: 1.12rem; line-height: 1.4; }
-  .guest-item.vip-placeholder { font-size: 1.35rem; padding: 1.5rem 0; }
-  .guest-list { gap: 0.25rem; }
+  .guest-item,
+  .table-card.dense-lg .guest-item,
+  .table-card.dense-xl .guest-item {
+    font-size: 1.14rem;
+    line-height: 1.38;
+  }
+  .guest-list,
+  .table-card.dense-lg .guest-list,
+  .table-card.dense-xl .guest-list {
+    gap: 0.26rem;
+  }
 }
 
 @media (max-width: 640px) {
-  .corner-flourish {
-    width: 48px;
-    height: 48px;
-    opacity: 0.35;
-  }
-  .corner-top-left { top: 4px; left: 4px; }
-  .corner-bottom-right { bottom: 4px; right: 4px; }
-
-  .wedding-header {
-    margin-bottom: 0.2rem;
+  .invitation-frame {
+    inset: 6px;
+    border-radius: 10px;
   }
 
-  .monogram-svg {
-    width: 40px;
-    height: 28px;
+  .seating-board-wrapper {
+    padding: calc(0.65rem + env(safe-area-inset-top, 0px)) 0.85rem calc(0.55rem + env(safe-area-inset-bottom, 0px)) 0.85rem;
   }
 
-  .wedding-prefix {
-    font-size: 0.6rem;
-    letter-spacing: 0.22em;
-  }
-
-  .names-container {
-    gap: 0.3rem;
-    margin-bottom: 0.08rem;
-  }
-
-  .person-name {
-    font-size: clamp(1.35rem, 6vw, 1.7rem);
-  }
-
-  .ampersand {
-    font-size: 1rem;
-  }
-
-  .header-divider {
-    max-width: 85%;
-    margin: 0.08rem auto;
-  }
-
-  .subtitle-text {
-    font-size: 0.62rem;
+  .dear-guest {
+    font-size: 0.56rem;
     letter-spacing: 0.18em;
   }
 
-  .venue-date {
+  .ornament-svg {
+    width: 125px;
+    height: 14px;
+  }
+
+  .joy-line {
+    font-size: 0.52rem;
+    letter-spacing: 0.16em;
+  }
+
+  .names-container {
+    gap: 0.4rem;
+    margin-bottom: 0.1rem;
+  }
+
+  .person-name {
+    font-size: clamp(1.6rem, 6.6vw, 2rem);
+  }
+
+  .and-word {
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+  }
+
+  .event-meta-row {
+    gap: 0.22rem 0.5rem;
+  }
+
+  .meta-dot {
+    display: none;
+  }
+
+  .invitation-venue-block {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .invitation-date-block {
+    gap: 0.4rem;
+  }
+
+  .date-col-side,
+  .date-month-year {
     font-size: 0.6rem;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.12em;
+  }
+
+  .date-day {
+    font-size: 0.78rem;
+  }
+
+  .meta-gold-divider {
+    height: 12px;
+  }
+
+  .venue-script {
+    font-size: 1.22rem;
+  }
+
+  .venue-city {
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
   }
 
   .group-nav {
-    margin: 0.25rem 0 0.4rem;
-    gap: 0.3rem;
+    margin: 0.22rem 0 0.38rem;
+    gap: 0.28rem;
   }
 
   .group-tabs {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.3rem;
     width: 100%;
-    gap: 0.35rem;
   }
 
   .group-tab {
-    font-size: 0.76rem;
+    font-size: 0.64rem;
     letter-spacing: 0.08em;
-    padding: 0.48rem 0.3rem;
-    min-height: 36px;
+    padding: 0.4rem 0.62rem;
+    min-height: 31px;
   }
 
   .tables-grid.grouped {
     grid-template-columns: 1fr;
-    gap: 0.8rem;
+    gap: 0.75rem;
   }
 
   .table-card {
-    padding: 0.9rem 0.85rem;
-  }
-
-  .table-card-header {
-    margin-bottom: 0.45rem;
-    padding-bottom: 0.35rem;
+    padding: 0.85rem 0.85rem;
   }
 
   .table-title {
-    font-size: 1.1rem;
+    font-size: 1.06rem;
   }
 
-  .guest-list {
-    gap: 0.26rem;
-  }
-
-  .guest-item {
-    font-size: 1.2rem;
+  .guest-item,
+  .table-card.dense-lg .guest-item,
+  .table-card.dense-xl .guest-item {
+    font-size: 1.18rem;
     line-height: 1.4;
   }
 
-  .guest-item.vip-placeholder {
-    font-size: 1.4rem;
-    padding: 1.2rem 0;
-  }
-
   .wedding-footer {
-    margin-top: 0.3rem;
-    padding-top: 0.25rem;
-    border-top: 1px solid var(--card-border-inner);
+    margin-top: 0.22rem;
+    padding-top: 0.15rem;
   }
 
-  .scripture-quote {
-    font-size: 0.65rem;
-    line-height: 1.25;
+  .scanning-note {
+    font-size: 1.18rem;
   }
 }

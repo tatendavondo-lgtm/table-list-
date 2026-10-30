@@ -1,12 +1,17 @@
 {
-  "name": "Tinotenda & Chiedza — Table Allocation",
-  "short_name": "Our Tables",
+  "name": "Tawanda & Eunice — Wedding Table Allocation",
+  "short_name": "Table Allocation",
   "start_url": "./index.html",
   "display": "fullscreen",
   "orientation": "any",
-  "background_color": "#08080A",
-  "theme_color": "#08080A",
+  "background_color": "#FAF6F0",
+  "theme_color": "#FAF6F0",
   "icons": [
-    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
   ]
 }
