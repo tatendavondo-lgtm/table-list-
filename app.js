@@ -11,12 +11,10 @@ const TABLES = [
     shortLabel: "VIP",
     isVip: true,
     guests: [
-      "CBZ Bank (4)",
-      "Stanbic Bank (4)",
-      "NMB Bank (4)",
-      "EcoBank (4)",
-      "Total Energies (4)",
-      "Zuva Petroleum (4)",
+      "CBZ Bank (party of 4)",
+      "StanBic Bank (party of 4)",
+      "NMB Bank (party of 4)",
+      "ECO Bank (party of 4)",
       "Mr & Mrs Tungwarara",
       "Mr & Mrs Mukatu"
     ]
@@ -69,8 +67,7 @@ const TABLES = [
       "Mr & Mrs Sasa",
       "Bishop & Amai Madawo",
       "Bishop Nehemaya Mutendi +5",
-      "Mr & Mrs Hebert Mutendi",
-      "ZCC Chaka +4"
+      "Mr & Mrs Hebert Mutendi"
     ]
   },
   {
@@ -171,10 +168,10 @@ const TABLES = [
     isVip: false,
     guests: [
       "Mr & Mrs Mandeya",
-      "Dr Mr & Mrs Tagwirei Kudakwashe",
+      "Dr, Mr & Mrs Tagwirei Kudakwashe",
       "Mr & Mrs Kondongwe Stanley",
       "Mr & Mrs Gumbochuma Justine",
-      "Mr & Mrs Mulalazi Everton (VIP)"
+      "Mr & Mrs Mulalazi Everton"
     ]
   },
   {
@@ -220,7 +217,6 @@ const TABLES = [
       "Mufaro Makore",
       "Lilian Gasva & Husband",
       "Linah Gasva & Husband",
-      "Tinotenda Mutyebere & Husband",
       "Tsitsi Kwangwa & Husband",
       "Mr & Mrs Kwangwa Tawanda",
       "Mr & Mrs Kwangwa Kris",
@@ -300,8 +296,8 @@ const TABLES = [
     shortLabel: "26",
     isVip: false,
     guests: [
-      "Sifelani Mabhachi +1",
-      "Nyarai Mabhachi +1",
+      "Sifelani Mabhachi + 1",
+      "Nyarai Mabhachi + 1",
       "Tambudzai Mabhachi",
       "Vongai Watura & Husband",
       "Baba Gire & Wife",
