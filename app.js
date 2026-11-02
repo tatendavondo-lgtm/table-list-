@@ -12,11 +12,15 @@ const TABLES = [
     "isVip": false,
     "guests": [
       "Gogo Mutyebere",
-      "Mr & Mrs Mutyebere Pinto",
-      "Mr & Mrs Mutyebere Farai",
-      "Mr & Mrs Kwangwa Jaison",
-      "Mr & Mrs Musungwa William",
-      "Mrs Kwangwa (Mai Edwin)"
+      "Mrs Mutyebere Pinto",
+      "Mr Mutyebere Pinto",
+      "Mr Mutyebere Farai",
+      "Mrs Mutyebere Farai",
+      "Mr Kwangwa Jaison",
+      "Mrs Kwangwa Jaison",
+      "Mr Musungwa William",
+      "Mrs Musungwa William",
+      "Mrs Kwangwa ( mai Edwin)"
     ]
   },
   {
@@ -26,10 +30,15 @@ const TABLES = [
     "isVip": false,
     "guests": [
       "Sifelani Mabhachi",
+      "Sifelani Mabhachi",
       "Tambudzai Mabhachi",
-      "Nyarai Mabhachi",
-      "Vongai Watura & Husband",
-      "Baba & Mai Gire"
+      "Nyarai  Mabhachi",
+      "Nyarai  Mabhachi",
+      "Tambudzai Mabhachi",
+      "Vongai Watura",
+      "Vongai Watura Husband",
+      "Baba Gire",
+      "Mai Gire"
     ]
   },
   {
@@ -43,7 +52,10 @@ const TABLES = [
       "Isheanopa Watura",
       "Delight Ncube",
       "Nyaradzo Chiwawa",
-      "Simbarashe Makura & Wife",
+      "Nyaradzo Chiwawa",
+      "simbarashe Makura wife",
+      "Simbarashe Makura &wife",
+      "Mr & Mrs Chiondegwa Benard",
       "Mr & Mrs Chiondegwa Benard"
     ]
   },
@@ -56,10 +68,12 @@ const TABLES = [
       "Tafadzwa Kasuso",
       "Makanaka Kasuso",
       "Mr & Mrs Mungofa",
-      "Tinashe Mungofa",
+      "Tinashe  Mungofa",
       "Tadiwa Mungofa",
       "Chido Makura & Husband",
       "Mr & Mrs Shumbanhete Liberty",
+      "Mr & Mrs Shumbanhete Liberty",
+      "Roily Shumbanhete & Husband",
       "Roily Shumbanhete & Husband"
     ]
   },
@@ -75,7 +89,8 @@ const TABLES = [
       "Mrs Watura Jnr",
       "Mrs Nasilile",
       "Mr Nasilile",
-      "Joy Makura & Husband",
+      "Joy Makura Husband",
+      "Joy Makura",
       "Mrs Kasuso",
       "Mr Kasuso"
     ]
@@ -88,8 +103,12 @@ const TABLES = [
     "guests": [
       "Gogo Mlambo",
       "Sekuru & Gogo Mlambo",
+      "Sekuru & Gogo Mlambo",
       "Praise Mlambo",
       "Hazel Mlambo",
+      "Mr & Mrs Makore",
+      "Mr & Mrs Makore",
+      "Mr & Mrs Makore",
       "Mr & Mrs Makore"
     ]
   },
@@ -100,9 +119,14 @@ const TABLES = [
     "isVip": false,
     "guests": [
       "Mr & Mrs Chenjerai Obert",
+      "Mr & Mrs Chenjerai Obert",
+      "Mr & Mrs Chenjerai Tawanda",
       "Mr & Mrs Chenjerai Tawanda",
       "Mr & Mrs Chenjerai Shadreck",
-      "Alice Chenjerai & Husband",
+      "Mr & Mrs Chenjerai Shadreck",
+      "Alice  Chenjerai & Husband",
+      "Alice  Chenjerai & Husband",
+      "Mr & Mrs Shumbanhete Muraga",
       "Mr & Mrs Shumbanhete Muraga"
     ]
   },
@@ -113,9 +137,14 @@ const TABLES = [
     "isVip": false,
     "guests": [
       "Loice Shumbanhete & Husband",
+      "Loice Shumbanhete & Husband",
+      "Pepe Kumbula & Husband",
       "Pepe Kumbula & Husband",
       "Mr & Mrs Kumbula Kim",
+      "Mr & Mrs Kumbula Kim",
       "Mr & Mrs Kumbula Richard",
+      "Mr & Mrs Kumbula Richard",
+      "Mr & Mrs Chiondegwa Bothwell",
       "Mr & Mrs Chiondegwa Bothwell"
     ]
   },
@@ -126,10 +155,14 @@ const TABLES = [
     "isVip": false,
     "guests": [
       "Mr & Mrs Kwangwa Talent",
+      "Mr & Mrs Kwangwa Talent",
+      "Mr & Mrs Chingware Stan",
       "Mr & Mrs Chingware Stan",
       "Mr & Mrs Mutyebere Simbarashe",
-      "Mr & Mrs Chenjerai Benson",
-      "Gogo Chingware (Mai Simba)"
+      "Mr & Mrs Mutyebere Simbarashe",
+      "Mr & Mrs  Chenjerai Benson",
+      "Mr & Mrs  Chenjerai Benson",
+      "Gogo Chingware (mai Simba)"
     ]
   },
   {
@@ -138,8 +171,11 @@ const TABLES = [
     "shortLabel": "11",
     "isVip": false,
     "guests": [
-      "Mr & Mrs Kwangwa Thomas",
-      "Mr & Mrs Kwangwa Tobias",
+      "Mr & Mrs Kwangwa  Thomas",
+      "Mr & Mrs Kwangwa  Thomas",
+      "Mr  & Mrs Kwangwa Tobias",
+      "Mr  & Mrs Kwangwa Tobias",
+      "Ropafadzo Kwangwa & Husband",
       "Ropafadzo Kwangwa & Husband",
       "Makomborere Kwangwa",
       "Makanaka Kwangwa"
@@ -152,9 +188,14 @@ const TABLES = [
     "isVip": false,
     "guests": [
       "Tsitsi Kwangwa & Husband",
+      "Tsitsi Kwangwa & Husband",
+      "Mr & Mrs Kwangwa Tawanda",
       "Mr & Mrs Kwangwa Tawanda",
       "Mr & Mrs Kwangwa Kris",
-      "Mr & Mrs Kwangwa Simon",
+      "Mr & Mrs Kwangwa Kris",
+      "Mr & Mrs Kwangwa  Simon",
+      "Mr & Mrs Kwangwa  Simon",
+      "Wadzanai Kwangwa & Husband",
       "Wadzanai Kwangwa & Husband"
     ]
   },
@@ -165,9 +206,14 @@ const TABLES = [
     "isVip": false,
     "guests": [
       "Mr & Mrs Kwangwa Oliver",
+      "Mr & Mrs Kwangwa Oliver",
+      "Adrian Kwangwa & Husband",
       "Adrian Kwangwa & Husband",
       "Tenda Kwangwa & Husband",
+      "Tenda Kwangwa & Husband",
       "Kupakwashe Munzvenga & Wife",
+      "Kupakwashe Munzvenga & Wife",
+      "Winnet Kwangwa & Husband",
       "Winnet Kwangwa & Husband"
     ]
   },
@@ -181,7 +227,10 @@ const TABLES = [
       "Edwin Kwangwa",
       "Mrs Munzvenga",
       "Rumbidzai Kwangwa & Husband",
+      "Rumbidzai Kwangwa & Husband",
       "Caroline Kwangwa & Husband",
+      "Caroline Kwangwa & Husband",
+      "Mr & Mrs Chingware Botha",
       "Mr & Mrs Chingware Botha"
     ]
   },
@@ -191,10 +240,15 @@ const TABLES = [
     "shortLabel": "15",
     "isVip": false,
     "guests": [
-      "Mr & Mrs Kwangwa Snr",
+      "Mr & Mrs Kwangw Snr",
+      "Mr & Mrs Kwangw Snr",
+      "Mr & Mrs Kwangwa Tapison",
       "Mr & Mrs Kwangwa Tapison",
       "Mr & Mrs Kwangwa Elias",
+      "Mr & Mrs Kwangwa Elias",
       "Mr & Mrs Kwangwa Pio",
+      "Mr & Mrs Kwangwa Pio",
+      "Shumirai Gondo & Husband",
       "Shumirai Gondo & Husband"
     ]
   },
@@ -205,9 +259,14 @@ const TABLES = [
     "isVip": false,
     "guests": [
       "Mr & Mrs Matuzula",
+      "Mr & Mrs Matuzula",
+      "Mr & Mrs Mazango",
       "Mr & Mrs Mazango",
       "Mr & Mrs Nyatsime",
+      "Mr & Mrs Nyatsime",
       "Mr & Mrs Matsinde",
+      "Mr & Mrs Matsinde",
+      "Mr & Mrs Nguwaya",
       "Mr & Mrs Nguwaya"
     ]
   },
@@ -218,9 +277,14 @@ const TABLES = [
     "isVip": false,
     "guests": [
       "Bishop Nehemaya Mutendi",
+      "Bishop Nehemaya Mutendi",
+      "Mr & Mrs Hebert Mutendi",
       "Mr & Mrs Hebert Mutendi",
       "Mr & Mrs Sasa",
+      "Mr & Mrs Sasa",
       "Bishop & Amai Madawo",
+      "Bishop & Amai Madawo",
+      "Dr, Bishop & Amai Madziyire",
       "Dr, Bishop & Amai Madziyire"
     ]
   },
@@ -231,9 +295,14 @@ const TABLES = [
     "isVip": false,
     "guests": [
       "Mr & Mrs Nyamayevhu",
+      "Mr & Mrs Nyamayevhu",
+      "Mr & Mrs Devera",
       "Mr & Mrs Devera",
       "Mr & Mrs Chimedza",
+      "Mr & Mrs Chimedza",
       "Mr & Mrs Deredzai",
+      "Mr & Mrs Deredzai",
+      "Mr & Mrs Gomba",
       "Mr & Mrs Gomba"
     ]
   },
@@ -243,10 +312,15 @@ const TABLES = [
     "shortLabel": "19",
     "isVip": false,
     "guests": [
+      "Lilian Gasva  & Husband",
       "Lilian Gasva & Husband",
       "Linah Gasva & Husband",
+      "Linah Gasva & Husband",
       "Tinotenda Mutyebere & Husband",
-      "Patience Kumbula & Husband",
+      "Tinotenda Mutyebere & Husband",
+      "Patience Kumbula and Husband",
+      "Patience Kumbula and Husband",
+      "Maria Mutyebere & Husband",
       "Maria Mutyebere & Husband"
     ]
   },
@@ -257,9 +331,13 @@ const TABLES = [
     "isVip": false,
     "guests": [
       "Mr & Mrs Madziyire Joseph",
+      "Mr & Mrs Madziyire Joseph",
+      "Mr & Mrs Madziyire Josphate",
       "Mr & Mrs Madziyire Josphate",
       "Mr & Mrs Mugovo",
+      "Mr & Mrs Mugovo",
       "Mrs Sekiwa",
+      "Rumbi Shumbanhete & Husband",
       "Rumbi Shumbanhete & Husband"
     ]
   },
@@ -270,8 +348,12 @@ const TABLES = [
     "isVip": false,
     "guests": [
       "Mr & Mrs Musungwa Tinashe",
+      "Mr & Mrs Musungwa Tinashe",
+      "Mr & Mrs Mupandare",
       "Mr & Mrs Mupandare",
       "Mr & Mrs Chirovamhangu",
+      "Mr & Mrs Chirovamhangu",
+      "Mr & Mrs Benard",
       "Mr & Mrs Benard",
       "Vongai Musungwa"
     ]
@@ -283,9 +365,14 @@ const TABLES = [
     "isVip": false,
     "guests": [
       "Dr Mr & Mrs Tagwirei Kudakwashe",
+      "Dr Mr & Mrs Tagwirei Kudakwashe",
+      "Mr & Mrs Kondongwe Stanley",
       "Mr & Mrs Kondongwe Stanley",
       "Mr & Mrs Gumbochuma Justine",
+      "Mr & Mrs Gumbochuma Justine",
       "Mr & Mrs Mulalazi Everton",
+      "Mr & Mrs Mulalazi Everton",
+      "Mr & Mrs Tungwarara",
       "Mr & Mrs Tungwarara"
     ]
   },
@@ -296,7 +383,12 @@ const TABLES = [
     "isVip": false,
     "guests": [
       "Mr & Mrs Mandeya",
+      "Mr & Mrs Mandeya",
       "Bishop Mutendi",
+      "Bishop Mutendi",
+      "Bishop Mutendi",
+      "Bishop Mutendi",
+      "Mr & Mrs Mutyebere Wonder",
       "Mr & Mrs Mutyebere Wonder"
     ]
   },
@@ -309,9 +401,11 @@ const TABLES = [
       "Mercy Ganyani",
       "Shingirirai Chigaduro",
       "Mr & Mrs Chiwa",
+      "Mr & Mrs Chiwa",
       "Ms Eustina Tabvanei",
       "Scholastic Chikwinya",
       "Mr Stuart",
+      "Mr & Mrs Makore Milton",
       "Mr & Mrs Makore Milton"
     ]
   },
@@ -322,9 +416,14 @@ const TABLES = [
     "isVip": false,
     "guests": [
       "Mr & Mrs Chiropa Clemence",
+      "Mr & Mrs Chiropa Clemence",
+      "Mr & Mrs Nyangari Jetro",
       "Mr & Mrs Nyangari Jetro",
       "Mr & Mrs Kangai Jaspher",
+      "Mr & Mrs Kangai Jaspher",
       "Mr & Mrs Blessing",
+      "Mr & Mrs Blessing",
+      "Mr & Mrs Mutsa Shonhiwa",
       "Mr & Mrs Mutsa Shonhiwa"
     ]
   },
@@ -335,9 +434,14 @@ const TABLES = [
     "isVip": false,
     "guests": [
       "Mr & Mrs Darare Brenda",
+      "Mr & Mrs Darare Brenda",
+      "Mr & Mrs Mungate Paddington",
       "Mr & Mrs Mungate Paddington",
       "Mr & Mrs Tobaiwa Taurai",
+      "Mr & Mrs Tobaiwa Taurai",
       "Mr & Mrs Dzumbira Tatenda",
+      "Mr & Mrs Dzumbira Tatenda",
+      "Mr & Mrs Gwena",
       "Mr & Mrs Gwena"
     ]
   },
@@ -348,9 +452,14 @@ const TABLES = [
     "isVip": false,
     "guests": [
       "Mr & Mrs Chasowa Abena",
+      "Mr & Mrs Chasowa Abena",
+      "Mr & Mrs Moyana",
       "Mr & Mrs Moyana",
       "Mr & Mrs Mazara",
+      "Mr & Mrs Mazara",
       "Mr & Mrs Mudhadhadha",
+      "Mr & Mrs Mudhadhadha",
+      "Mr & Mrs Shumbanhete Paidaishe",
       "Mr & Mrs Shumbanhete Paidaishe"
     ]
   },
@@ -361,9 +470,14 @@ const TABLES = [
     "isVip": false,
     "guests": [
       "Mr & Mrs Chandiwana",
+      "Mr & Mrs Chandiwana",
+      "Mr & Mrs Mufudze",
       "Mr & Mrs Mufudze",
       "Mr & Mrs Takawira",
+      "Mr & Mrs Takawira",
       "Mr & Mrs Dr Chimhini",
+      "Mr & Mrs Dr Chimhini",
+      "Mr & Mrs Madhombiro",
       "Mr & Mrs Madhombiro"
     ]
   },
@@ -374,8 +488,12 @@ const TABLES = [
     "isVip": false,
     "guests": [
       "Mr & Mrs Makore Master",
+      "Mr & Mrs Makore Master",
+      "Mr & Mrs Mashiingaidze Norman",
       "Mr & Mrs Mashiingaidze Norman",
       "Mr & Mrs Kumbula Lazarous",
+      "Mr & Mrs Kumbula Lazarous",
+      "Mr & Mrs Kumbula Pardon",
       "Mr & Mrs Kumbula Pardon",
       "Mr & Mrs Chenjerai Paul"
     ]
@@ -387,9 +505,14 @@ const TABLES = [
     "isVip": false,
     "guests": [
       "Mr & Mrs Fernandis Paul",
+      "Mr & Mrs Fernandis Paul",
+      "Mr & Mrs Hwenga",
       "Mr & Mrs Hwenga",
       "Mr & Mrs Chidhakwa",
+      "Mr & Mrs Chidhakwa",
       "Mrs Nomusa",
+      "Mrs Nomusa",
+      "Rosie Sanyangore",
       "Rosie Sanyangore"
     ]
   },
@@ -400,8 +523,14 @@ const TABLES = [
     "isVip": false,
     "guests": [
       "Aunty Abbey & Husband",
+      "Aunty Abbey & Husband",
+      "Mr & Mrs Chiwaya",
       "Mr & Mrs Chiwaya",
       "Mr & Mrs Matiyenga Victor",
+      "Mr & Mrs Matiyenga Victor",
+      "Mr & Mrs Chenjerai Paul",
+      "Mr & Mrs Chenjerai Paul",
+      "Mr & Mrs Chenjerai Paul",
       "Mr & Mrs Chenjerai Paul"
     ]
   },
@@ -412,6 +541,12 @@ const TABLES = [
     "isVip": false,
     "guests": [
       "CBZ BANK",
+      "CBZ BANK",
+      "CBZ BANK",
+      "CBZ BANK",
+      "Stanbic Bank",
+      "Stanbic Bank",
+      "Stanbic Bank",
       "Stanbic Bank"
     ]
   },
@@ -422,6 +557,12 @@ const TABLES = [
     "isVip": false,
     "guests": [
       "NMB BANK",
+      "NMB BANK",
+      "NMB BANK",
+      "NMB BANK",
+      "ECO BANK",
+      "ECO BANK",
+      "ECO BANK",
       "ECO BANK"
     ]
   },
@@ -432,6 +573,12 @@ const TABLES = [
     "isVip": false,
     "guests": [
       "Total Energies",
+      "Total Energies",
+      "Total Energies",
+      "Total Energies",
+      "Zuva Petroleum",
+      "Zuva Petroleum",
+      "Zuva Petroleum",
       "Zuva Petroleum"
     ]
   },
@@ -460,9 +607,14 @@ const TABLES = [
     "isVip": false,
     "guests": [
       "Mr & Mrs Shumbanhete",
+      "Mr & Mrs Shumbanhete",
+      "Mr & Mrs Musisinyani",
       "Mr & Mrs Musisinyani",
       "Mr & Mrs Kumbula",
+      "Mr & Mrs Kumbula",
       "Mr & Mrs Mutyebere John",
+      "Mr & Mrs Mutyebere John",
+      "Mr & Mrs Mutyebere Relax",
       "Mr & Mrs Mutyebere Relax"
     ]
   }
