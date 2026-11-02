@@ -12,10 +12,14 @@ const TABLES = [
     "isVip": false,
     "guests": [
       "Gogo Mutyebere",
-      "Mr & Mrs Mutyebere Pinto",
-      "Mr & Mrs Mutyebere Farai",
-      "Mr & Mrs Kwangwa Jaison",
-      "Mr & Mrs Musungwa William",
+      "Mrs Mutyebere Pinto",
+      "Mr Mutyebere Pinto",
+      "Mr Mutyebere Farai",
+      "Mrs Mutyebere Farai",
+      "Mr Kwangwa Jaison",
+      "Mrs Kwangwa Jaison",
+      "Mr Musungwa William",
+      "Mrs Musungwa William",
       "Mrs Kwangwa (Mai Edwin)"
     ]
   },
@@ -29,7 +33,8 @@ const TABLES = [
       "Tambudzai Mabhachi",
       "Nyarai Mabhachi",
       "Vongai Watura & Husband",
-      "Baba Gire & Wife"
+      "Baba Gire",
+      "Mai Gire"
     ]
   },
   {
@@ -42,7 +47,8 @@ const TABLES = [
       "Ngoni Watura",
       "Isheanopa Watura",
       "Delight Ncube",
-      "Nyaradzo Chiwawa & Husband",
+      "Nyaradzo Chiwawa",
+      "Simbarashe Makura & Wife",
       "Mr & Mrs Chiondegwa Benard"
     ]
   },
@@ -68,11 +74,15 @@ const TABLES = [
     "shortLabel": "5",
     "isVip": false,
     "guests": [
-      "Mr & Mrs Watura",
-      "Mr & Mrs Watura Jnr",
-      "Mr & Mrs Nasilile",
+      "Mr Watura",
+      "Mrs Watura",
+      "Mr Watura Jnr",
+      "Mrs Watura Jnr",
+      "Mrs Nasilile",
+      "Mr Nasilile",
       "Joy Makura & Husband",
-      "Mr & Mrs Kasuso"
+      "Mrs Kasuso",
+      "Mr Kasuso"
     ]
   },
   {
@@ -85,7 +95,7 @@ const TABLES = [
       "Sekuru & Gogo Mlambo",
       "Praise Mlambo",
       "Hazel Mlambo",
-      "Mr & Mrs Makore (+2)"
+      "Mr & Mrs Makore"
     ]
   },
   {
@@ -291,7 +301,7 @@ const TABLES = [
     "isVip": false,
     "guests": [
       "Mr & Mrs Mandeya",
-      "Bishop Mutendi (party of 4)",
+      "Bishop Mutendi",
       "Mr & Mrs Mutyebere Wonder"
     ]
   },
@@ -397,7 +407,7 @@ const TABLES = [
       "Aunty Abbey & Husband",
       "Mr & Mrs Chiwaya",
       "Mr & Mrs Matiyenga Victor",
-      "Mr & Mrs Chenjerai Paul (party of 4)"
+      "Mr & Mrs Chenjerai Paul"
     ]
   },
   {
@@ -406,8 +416,8 @@ const TABLES = [
     "shortLabel": "32",
     "isVip": false,
     "guests": [
-      "CBZ BANK (party of 4)",
-      "Stanbic Bank (party of 4)"
+      "CBZ BANK",
+      "Stanbic Bank"
     ]
   },
   {
@@ -416,8 +426,8 @@ const TABLES = [
     "shortLabel": "33",
     "isVip": false,
     "guests": [
-      "NMB BANK (party of 4)",
-      "ECO BANK (party of 4)"
+      "NMB BANK",
+      "ECO BANK"
     ]
   },
   {
@@ -426,8 +436,8 @@ const TABLES = [
     "shortLabel": "34",
     "isVip": false,
     "guests": [
-      "Total Energies (party of 4)",
-      "Zuva Petroleum (party of 4)"
+      "Total Energies",
+      "Zuva Petroleum"
     ]
   },
   {
