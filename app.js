@@ -12,14 +12,10 @@ const TABLES = [
     "isVip": false,
     "guests": [
       "Gogo Mutyebere",
-      "Mrs Mutyebere Pinto",
-      "Mr Mutyebere Pinto",
-      "Mr Mutyebere Farai",
-      "Mrs Mutyebere Farai",
-      "Mr Kwangwa Jaison",
-      "Mrs Kwangwa Jaison",
-      "Mr Musungwa William",
-      "Mrs Musungwa William",
+      "Mr & Mrs Mutyebere Pinto",
+      "Mr & Mrs Mutyebere Farai",
+      "Mr & Mrs Kwangwa Jaison",
+      "Mr & Mrs Musungwa William",
       "Mrs Kwangwa (Mai Edwin)"
     ]
   },
@@ -33,8 +29,7 @@ const TABLES = [
       "Tambudzai Mabhachi",
       "Nyarai Mabhachi",
       "Vongai Watura & Husband",
-      "Baba Gire",
-      "Mai Gire"
+      "Baba & Mai Gire"
     ]
   },
   {
