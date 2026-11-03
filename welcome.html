@@ -58,11 +58,28 @@
     </div>
 
     <blockquote class="verse-card">
-      <p class="verse-text">&ldquo;When Christ, who is our life, shall appear, then shall ye also appear with him in glory.&rdquo;</p>
-      <footer class="verse-ref">Colossians 3:4</footer>
+      <p class="verse-text">&ldquo;And above all these things put on charity, which is the bond of perfectness.&rdquo;</p>
+      <footer class="verse-ref">Colossians 3:14</footer>
     </blockquote>
 
     <p class="welcome-closing">Thank you for being part of our special day.</p>
   </main>
+
+  <script>
+    function tryEnterFullscreen() {
+      if (document.fullscreenElement || document.webkitFullscreenElement) return;
+      const el = document.documentElement;
+      const req = el.requestFullscreen || el.webkitRequestFullscreen || el.msRequestFullscreen;
+      if (req) {
+        try {
+          const p = req.call(el, { navigationUI: "hide" });
+          if (p && typeof p.catch === "function") p.catch(() => {});
+        } catch (e) {}
+      }
+    }
+    document.addEventListener("click", tryEnterFullscreen);
+    document.addEventListener("touchstart", tryEnterFullscreen, { passive: true });
+    window.addEventListener("load", tryEnterFullscreen);
+  </script>
 </body>
 </html>
